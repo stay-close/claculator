@@ -1,0 +1,152 @@
+:root {
+    --side_color: #192a56;
+    --cal_body_color: #273c75;
+    --number_color: #00cec9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #95a5a6;
+}
+
+.container {
+    width: 1170px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h4 {
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 15px;
+    font-family: cursive;
+    text-transform: capitalize;
+}
+
+.result {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.history,
+.screen {
+    width: 100%;
+    padding: 10px 5px;
+    border: 0;
+    outline: 0;
+    text-align: right;
+    font-size: 20px;
+}
+
+.screen {
+    border-radius: 10px;
+}
+
+.history {
+    color: rgba(0, 0, 0, .65)
+}
+
+.calculator {
+    width: auto;
+    height: auto;
+    border: 1px solid #000;
+    position: relative;
+    padding: 10px 15px 20px 15px;
+    border-radius: 10px;
+    background: var(--cal_body_color);
+    box-shadow: -20px 20px 0 var(--side_color);
+}
+
+.calculator::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -13px;
+    width: 30px;
+    height: 30px;
+    background: var(--side_color);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.calculator::before {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    right: 9px;
+    width: 30px;
+    height: 30px;
+    background: var(--side_color);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.cal_button {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(5, 70px);
+    grid-gap: 5px;
+}
+
+button {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 50%;
+    border: 0;
+    outline: 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .65), -2px -2px 3px rgba(255, 255, 255, .65);
+}
+
+.number {
+    background: var(--number_color);
+}
+
+.eql_btn,
+.ac_btn {
+    grid-column: span 2;
+    border-radius: 30px;
+}
+
+.eql_btn {
+    background: #00b894;
+}
+
+.ac_btn {
+    background: tomato;
+}
+
+.clr_btn {
+    background: #ff7675;
+}
+
+.operand {
+    background: #6c5ce7;
+    font-size: 25px;
+}
+
+span.side {
+    position: absolute;
+    bottom: -22px;
+    left: -7px;
+    width: 2px;
+    height: 28px;
+    background: var(--cal_body_color);
+    transform: rotate(45deg);
+}
